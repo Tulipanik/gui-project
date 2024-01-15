@@ -1,6 +1,7 @@
 import Image from "next/image";
 import "./globals.css";
 import styles from "./globals.css";
+import MenuBar from "./components/menuBar";
 
 export const metadata = {
   title: "Create Next App",
@@ -20,14 +21,7 @@ export default function RootLayout({ children }) {
                 <Image src="icon_person.svg" width={30} height={30} />
               </div>
             </div>
-            <ul className={`menuBar ${styles.menuBar}`}>
-              <li>Orders</li>
-              <li>Sales Quality</li>
-              <li>Buyer Opinions</li>
-              <li>Offer Ranking</li>
-              <li>Sales chart</li>
-              <li>Sales tips</li>
-            </ul>
+            <MenuBar />
             {children}
           </div>
         </div>
