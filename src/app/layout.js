@@ -2,6 +2,7 @@ import Image from "next/image";
 import "./globals.css";
 import styles from "./globals.css";
 import MenuBar from "./components/menuBar";
+import Menu from "./components/account-options/menu";
 
 export const metadata = {
   title: "Create Next App",
@@ -9,10 +10,12 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const menu = true;
   return (
     <html lang="en">
       <body style={{ overflow: "hidden" }}>
         <div className="container">
+          {menu && <Menu />}
           <div className={`menu ${styles.menu}`}>
             <div className={`dashboardString ${styles.dashboardString}`}>
               <div>DashGame</div>
