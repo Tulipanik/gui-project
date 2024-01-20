@@ -1,9 +1,13 @@
 "use client";
 
+import React, { useState } from 'react';
 import { Chart as ChartJS } from "chart.js/auto";
 import { Line } from "react-chartjs-2";
+import {dataSortedByHours, dataSortedByDays, dataSortedByMounths} from "../../mock-up/chartData"
 
 export default function Chart() {
+  const [mockData, setMockData] = useState(dataSortedByHours);
+
   const data = {
     labels: ["January", "February", "March", "April", "May"],
     datasets: [
