@@ -7,7 +7,7 @@ export default function SalesChart() {
       <div className="inline-flex space-x-32 w-4/6 py-8">
         <div className="inline-flex items-center justify-center">
           Measure of presentation:
-          <MenuSimple options={["day", "week", "year"]} />{" "}
+          <MenuSimple options={["today", "this week", "last week"]} />{" "}
         </div>
         <div className="inline-flex items-center justify-center">
           Time range: <MenuSimple options={["sales", "days"]} />
