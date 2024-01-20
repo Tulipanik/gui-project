@@ -1,6 +1,7 @@
 import BasicRating from "../components/sales-quality/progressBar";
 import QualityCategories from "../components/sales-quality/qualityCategories";
 import QualityCheck from "../components/sales-quality/qualityCheck";
+import {salesQualities} from "../mock-up/sales.quality"
 
 export default function SalesQuality() {
   return (
@@ -18,7 +19,7 @@ export default function SalesQuality() {
 
       <div className="col-start-2 col-end-2">
         <div className="border-l-4 border-orange-400 flex h-full justify-center item-center items-center mb-32 mt-10">
-          <BasicRating value={3} name={"siema:"} />
+          <BasicRating value={salesQualities[0].score} name={salesQualities[0].aspect} />
         </div>
       </div>
     </div>
