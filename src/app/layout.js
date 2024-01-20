@@ -4,6 +4,11 @@ import styles from "./globals.css";
 import MenuBar from "./components/menuBar";
 import Menu from "./components/account-options/menu";
 import MainOptions from "./components/account-options/mainWindow";
+import ChangePassword from "./components/account-options/changePassword";
+import EditRelatedAccount from "./components/account-options/editReleatedAccount";
+import AddRelatedAccount from "./components/account-options/addRelatedAccount";
+import ChangeAccountInfo from "./components/account-options/changeAccountInfo";
+import DeleteRelatedAccount from "./components/account-options/deleteReleatedAccount";
 
 export const metadata = {
   title: "Create Next App",
@@ -17,6 +22,11 @@ export default function RootLayout({ children }) {
       <body style={{ overflow: "hidden" }}>
         <div className="container">
           <MainOptions />
+          {/* <ChangePassword /> */}
+          {/* <EditRelatedAccount /> */}
+          {/* <AddRelatedAccount /> */}
+          {/* <ChangeAccountInfo /> */}
+          <DeleteRelatedAccount />
           <div className={`menu ${styles.menu}`}>
             <div className={`dashboardString ${styles.dashboardString}`}>
               <div>DashGame</div>
