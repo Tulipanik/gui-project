@@ -1,18 +1,29 @@
 "use client";
 
 import styles from "./../globals.css";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function MenuBar() {
-  const router = useRouter();
   return (
     <ul className={`menuBar ${styles.menuBar}`}>
-      <li onClick={() => router.push("/orders")}>Orders</li>
-      <li>Sales Quality</li>
-      <li>Buyer Opinions</li>
-      <li>Offer Ranking</li>
-      <li>Sales chart</li>
-      <li>Sales tips</li>
+      <li>
+        <Link href="/orders">Orders</Link>
+      </li>
+      <li>
+        <Link href="/sales-quality">Sales Quality</Link>
+      </li>
+      <li>
+        <Link href="/buyer-opinions">Buyer Opinions</Link>
+      </li>
+      <li>
+        <Link href="/offer-ranking">Offer Ranking</Link>
+      </li>
+      <li>
+        <Link href="/sales-chart">Sales chart</Link>
+      </li>
+      <li>
+        <Link href="/sales-tips">Sales tips</Link>
+      </li>
     </ul>
   );
 }

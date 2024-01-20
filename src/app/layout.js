@@ -3,6 +3,7 @@ import "./globals.css";
 import styles from "./globals.css";
 import MenuBar from "./components/menuBar";
 import Menu from "./components/account-options/menu";
+import MainOptions from "./components/account-options/mainWindow";
 
 export const metadata = {
   title: "Create Next App",
@@ -15,7 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body style={{ overflow: "hidden" }}>
         <div className="container">
-          {menu && <Menu />}
+          <MainOptions />
           <div className={`menu ${styles.menu}`}>
             <div className={`dashboardString ${styles.dashboardString}`}>
               <div>DashGame</div>

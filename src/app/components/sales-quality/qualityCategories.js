@@ -1,6 +1,6 @@
 export default function QualityCategories() {
   return (
-    <div className="bg-orange-200 w-5/12 rounded-lg drop-shadow-md">
+    <div className="bg-orange-200 rounded-lg drop-shadow-md">
       <h2>Quality category:</h2>
       <p>
         <ol>

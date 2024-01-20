@@ -41,8 +41,7 @@ export default function Chart() {
   };
 
   return (
-    <div className="h-4/6">
-      <h2>Bar Chart Example</h2>
+    <div className="w-4/6">
       <Line data={data} options={options} />
     </div>
   );
