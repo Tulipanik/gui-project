@@ -9,6 +9,7 @@ import EditRelatedAccount from "./components/account-options/editReleatedAccount
 import AddRelatedAccount from "./components/account-options/addRelatedAccount";
 import ChangeAccountInfo from "./components/account-options/changeAccountInfo";
 import DeleteRelatedAccount from "./components/account-options/deleteReleatedAccount";
+import PopUpWindows from "./components/popUp";
 
 export const metadata = {
   title: "Create Next App",
@@ -21,12 +22,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body style={{ overflow: "hidden" }}>
         <div className="container">
-          <MainOptions />
-          {/* <ChangePassword /> */}
-          {/* <EditRelatedAccount /> */}
-          {/* <AddRelatedAccount /> */}
-          {/* <ChangeAccountInfo /> */}
-          <DeleteRelatedAccount />
+          <PopUpWindows />
           <div className={`menu ${styles.menu}`}>
             <div className={`dashboardString ${styles.dashboardString}`}>
               <div>DashGame</div>
