@@ -1,18 +1,12 @@
-"use client";
-
-import React, { useState } from 'react';
 import { Chart as ChartJS } from "chart.js/auto";
 import { Line } from "react-chartjs-2";
-import {dataSortedByHours, dataSortedByDays, dataSortedByMounths} from "../../mock-up/chartData"
 
-export default function Chart() {
-  const [mockData, setMockData] = useState(dataSortedByHours);
-
+export default function Chart({ xAxis, yAxis }) {
   const data = {
-    labels: ["January", "February", "March", "April", "May"],
+    labels: xAxis,
     datasets: [
       {
-        label: "Sample Data",
+        label: "Sales Data",
         borderColor: "#CA722E",
         borderWidth: 2,
         pointBackgroundColor: "#CA722E",
@@ -23,7 +17,7 @@ export default function Chart() {
         pointHoverBorderWidth: 2,
         pointRadius: 4,
         pointHitRadius: 10,
-        data: [65, 59, 59, 61, 60],
+        data: yAxis,
       },
     ],
   };
