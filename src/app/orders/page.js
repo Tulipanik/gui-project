@@ -5,7 +5,7 @@ export default function Orders() {
     <div>
       <div className="mx-auto w-4/5">
         Count of orders: <span></span>
-        <MenuSimple options={["paid", "unpaid"]} />
+        <MenuSimple options={["all","paid", "unpaid", "in delivery"]} />
       </div>
       <OrderTable />
     </div>
