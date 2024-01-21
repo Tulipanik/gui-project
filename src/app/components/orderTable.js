@@ -1,4 +1,11 @@
+"use client";
+
+import React, { useState } from 'react';
+import {currentOrders} from "../mock-up/orders"
+
 export default function OrderTable() {
+  const [orders, setOrders] = useState(currentOrders);
+
   return (
     <table className="mx-auto w-4/5 border-2 border-solid border-orange-400 text-left">
       <thead className="bg-orange-200">
@@ -15,7 +22,16 @@ export default function OrderTable() {
           Status
         </th>
       </thead>
-      <tb className="h-4/5"></tb>
+      <tbody className="h-4/5">
+      {orders.map((order) => (
+          <tr key={order.id}>
+            <td>{order.id}</td>
+            <td>{order.orderID}</td>
+            <td>{order.date}</td>
+            <td>{order.status}</td>
+          </tr>
+        ))}
+      </tbody>
     </table>
   );
 }

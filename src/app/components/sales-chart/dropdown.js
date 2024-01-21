@@ -16,13 +16,14 @@ function useIsDarkMode() {
   return theme.palette.mode === "dark";
 }
 
-export default function MenuSimple({ options }) {
+export default function MenuSimple({ options, setStatus }) {
   const isDarkMode = useIsDarkMode();
   const [property, setProperty] = useState(options[0]);
 
   const createHandleMenuClick = (menuItem) => {
     return () => {
       setProperty(menuItem);
+      //setStatus(menuItem);
       console.log(`Clicked on ${menuItem}`);
     };
   };

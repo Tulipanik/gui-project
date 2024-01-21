@@ -12,8 +12,8 @@ export default function BasicRating({ name, value }) {
         "& > legend": { mt: 2 },
       }}
     >
-      <Typography component="legend">{name}</Typography>
-      <Rating name="read-only" value={value} readOnly />
+      <Typography component="legend">{"Evaluation in: " + name}</Typography>
+      <Rating name="read-only" value={value} readOnly max={10} />
     </Box>
   );
 }
