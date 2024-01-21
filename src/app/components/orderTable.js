@@ -23,12 +23,12 @@ export default function OrderTable() {
         </th>
       </thead>
       <tbody className="h-4/5">
-      {orders.map((order) => (
+        {orders.map((order, index) => (
           <tr key={order.id}>
-            <td>{order.id}</td>
-            <td>{order.orderID}</td>
-            <td>{order.date}</td>
-            <td>{order.status}</td>
+            <td className="border-solid border-2 border-orange-400 py-2 font-thin">{index + 1}</td>
+            <td className="border-solid border-2 border-orange-400 font-thin">{order.orderID}</td>
+            <td className="border-solid border-2 border-orange-400 font-thin">{order.date}</td>
+            <td className="border-solid border-2 border-orange-400 font-thin">{order.status}</td>
           </tr>
         ))}
       </tbody>
