@@ -4,11 +4,11 @@ export default function QualityCategories() {
       <h2>Quality category:</h2>
       <p>
         <ol>
-          <li>a</li>
-          <li>s</li>
-          <li>df</li>
-          <li>f</li>
-          <li>g</li>
+          <li>1. Product quality</li>
+          <li>2. Delivery time</li>
+          <li>3. Response time</li>
+          <li>4. Price to product</li>
+          <li>5. Client opinions</li>
         </ol>
       </p>
     </div>
