@@ -18,8 +18,11 @@ export default function SalesQuality() {
       </div>
 
       <div className="col-start-2 col-end-2">
-        <div className="border-l-4 border-orange-400 flex h-full justify-center item-center items-center mb-32 mt-10">
+        <div className="border-l-4 border-orange-400 flex flex-col h-full items-start justify-center mb-32 mt-10">
+          3 aspects in which you are the best:
           <BasicRating value={salesQualities[0].score} name={salesQualities[0].aspect} />
+          <BasicRating value={salesQualities[1].score} name={salesQualities[1].aspect} />
+          <BasicRating value={salesQualities[2].score} name={salesQualities[2].aspect} />
         </div>
       </div>
     </div>
