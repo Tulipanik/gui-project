@@ -1,5 +1,6 @@
 import "./globals.css";
 import styles from "./globals.css";
+import Link from "next/link";
 import MenuBar from "@/components/menuBar";
 import PopUpWindows from "@/components/popUp";
 import StoreProvider from "./StoreProvider";
@@ -19,7 +20,9 @@ export default function RootLayout({ children }) {
             <PopUpWindows />
             <div className={`menu ${styles.menu}`}>
               <div className={`dashboardString ${styles.dashboardString}`}>
-                <div>DashGame</div>
+                <div>
+                  <Link href="/">DashGame</Link>
+                </div>
                 <div className="right-2">
                   <LogedUser />
                 </div>
