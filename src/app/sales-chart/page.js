@@ -73,7 +73,7 @@ export default function SalesChart() {
             options={[
               "turnover",
               "number of sales",
-            ]} /*setStatus={setSelectedMeasure()}*/
+            ]} setStatus={setSelectedMeasure}
           />{" "}
         </div>
         <div className="inline-flex items-center justify-center">
@@ -83,7 +83,7 @@ export default function SalesChart() {
               "today",
               "this week",
               "last week",
-            ]} /*setStatus={setSelectedTimeRange()}*/
+            ]} setStatus={setSelectedTimeRange}
           />
         </div>
 
