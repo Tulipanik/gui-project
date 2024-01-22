@@ -23,7 +23,7 @@ export default function MenuSimple({ options, setStatus }) {
   const createHandleMenuClick = (menuItem) => {
     return () => {
       setProperty(menuItem);
-      //setStatus(menuItem);
+      setStatus(menuItem);
       console.log(`Clicked on ${menuItem}`);
     };
   };

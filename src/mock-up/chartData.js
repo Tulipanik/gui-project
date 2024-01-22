@@ -31,6 +31,6 @@ export const dataSortedByMounths = [
   { id: 8, time: "Wrzesień", turnover: 8002, sales: 700 },
   { id: 9, time: "Październik", turnover: 8200, sales: 711 },
   { id: 10, time: "Listopad", turnover: 8012, sales: 700 },
-  { id: 11, time: "Grudzień", turnover: 1204, sales: 903 },
+  { id: 11, time: "Grudzień", turnover: 12041, sales: 903 },
   { id: 12, time: "Styczeń", turnover: 7823, sales: 688 },
 ];

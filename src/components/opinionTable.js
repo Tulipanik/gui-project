@@ -1,13 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { allOpinions } from "@/mock-up/opinions";
 
-export default function OpinionTable() {
-  const [opinions, setOpinions] = useState(
-    [...allOpinions].sort((a, b) => b.stars - a.stars)
-  );
-
+export default function OpinionTable({ opinions }) {
   return (
     <table className="mx-auto w-4/5 border-2 border-solid border-orange-400 text-left">
       <thead className="bg-orange-200">

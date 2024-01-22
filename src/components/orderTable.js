@@ -3,9 +3,7 @@
 import React, { useState } from 'react';
 import {currentOrders} from "../mock-up/orders"
 
-export default function OrderTable() {
-  const [orders, setOrders] = useState(currentOrders);
-
+export default function OrderTable({orders}) {
   return (
     <table className="mx-auto w-4/5 border-2 border-solid border-orange-400 text-left">
       <thead className="bg-orange-200">
