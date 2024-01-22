@@ -17,8 +17,8 @@ export default function SalesQuality() {
         </div>
       </div>
 
-      <div className="col-start-2 col-end-2">
-        <div className="border-l-4 border-orange-400 flex flex-col h-full items-start justify-center mb-32 mt-10">
+      <div className=" flex justify-center border-l-4 border-orange-400 mt-5 col-start-2 col-end-2">
+        <div className=" flex flex-col h-full items-start justify-center mb-32 w-max">
           3 aspects in which you are the best:
           <BasicRating
             value={salesQualities[0].score}

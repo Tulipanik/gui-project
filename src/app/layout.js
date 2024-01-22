@@ -5,13 +5,14 @@ import MenuBar from "@/components/menuBar";
 import PopUpWindows from "@/components/popUp";
 import StoreProvider from "./StoreProvider";
 import LogedUser from "@/components/logedUser";
+// import { appWithTranslation } from "next-i18next";
 
 export const metadata = {
   title: "DashGame",
   description: "Develop your game shop",
 };
 
-export default function RootLayout({ children }) {
+function RootLayout({ children }) {
   return (
     <StoreProvider>
       <html lang="en">
@@ -20,11 +21,13 @@ export default function RootLayout({ children }) {
             <PopUpWindows />
             <div className={`menu ${styles.menu}`}>
               <div className={`dashboardString ${styles.dashboardString}`}>
-                <div>
-                  <Link href="/">DashGame</Link>
-                </div>
-                <div className="right-2">
-                  <LogedUser />
+                <div className="flex w-full justify-between ">
+                  <div className="left-1">
+                    <Link href="/">DashGame</Link>
+                  </div>
+                  <div className="mt-3">
+                    <LogedUser />
+                  </div>
                 </div>
               </div>
               <MenuBar />
@@ -61,3 +64,5 @@ export default function RootLayout({ children }) {
     </StoreProvider>
   );
 }
+
+export default RootLayout;

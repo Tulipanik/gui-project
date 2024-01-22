@@ -1,4 +1,5 @@
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
+import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import ManageAccountsOutlinedIcon from "@mui/icons-material/ManageAccountsOutlined";
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
 import AccountName from "../account";
@@ -6,9 +7,17 @@ import LogedUser from "../logedUser";
 import { usersData } from "@/mock-up/user";
 import { mainWindow } from "@/lib/features/windows/windowsSlice";
 import { useDispatch } from "react-redux";
+import React, { useState } from "react";
 
 export default function Menu() {
+  const [darkMode, setDarkMode] = useState(false);
   const dispatch = useDispatch();
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+
+    document.body.style.filter = darkMode ? "none" : "invert(1)";
+  };
   return (
     <div
       className="absolute bg-orange-100 w-2/12 h-screen z-10 border-4 border-orange-600 rounded-bl-3xl"
@@ -25,8 +34,13 @@ export default function Menu() {
           ))}
         </div>
         <ul className="mt-5 ml-2 [&_li]:py-3 [&_li]:cursor-pointer">
-          <li>
-            <DarkModeOutlinedIcon width={40} /> Change theme mode
+          <li onClick={() => toggleDarkMode()}>
+            {!darkMode ? (
+              <DarkModeOutlinedIcon width={40} />
+            ) : (
+              <LightModeOutlinedIcon width={40} />
+            )}{" "}
+            Change theme mode
           </li>
           <li onClick={() => dispatch(mainWindow())}>
             <ManageAccountsOutlinedIcon width={40} /> Main account options
