@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./../globals.css";
+import styles from "./../app/globals.css";
 import Link from "next/link";
 
 export default function MenuBar() {

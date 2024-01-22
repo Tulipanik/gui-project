@@ -1,5 +1,5 @@
-import OpinionTable from "../components/opinionTable";
-import MenuSimple from "../components/sales-chart/dropdown";
+import OpinionTable from "@/components/opinionTable";
+import MenuSimple from "@/components/sales-chart/dropdown";
 
 export default function BuyerOpinions() {
   return (

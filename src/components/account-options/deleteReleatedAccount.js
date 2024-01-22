@@ -1,4 +1,8 @@
+import { deleteAccWindow } from "@/lib/features/windows/windowsSlice";
+import { useDispatch } from "react-redux";
+
 export default function DeleteRelatedAccount() {
+  const dispatch = useDispatch();
   const account = "siema";
   return (
     <div className="absolute z-50 w-2/6 h-3/6 bg-orange-200 border-2 border-orange-400 mt-32">
@@ -10,7 +14,12 @@ export default function DeleteRelatedAccount() {
         <div className="text-center mt-10 ">{account}</div>
         <div className="[&_button]:inline-block mt-10 [&_*]:py-3 space-x-2 [&_*]:w-40 [&_*]:rounded-full justify-center">
           <button className="bg-[#F43426]">Delete</button>
-          <button className="bg-orange-600">Cancel</button>
+          <button
+            className="bg-orange-600"
+            onClick={() => dispatch(deleteAccWindow())}
+          >
+            Cancel
+          </button>
         </div>
       </div>
     </div>

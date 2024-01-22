@@ -10,16 +10,17 @@ import DeleteRelatedAccount from "./account-options/deleteReleatedAccount";
 import { useSelector } from "react-redux";
 
 export default function PopUpWindows() {
-  const toVisible = useSelector((state) => state.windows);
+  const toVisible = useSelector((state) => state.window);
+
   return (
     <>
-      <Menu />
-      {/* <MainOptions /> */}
-      {/* <ChangePassword />
-      <EditRelatedAccount />
-      <AddRelatedAccount />
-      <ChangeAccountInfo /> */}
-      {/* <DeleteRelatedAccount /> */}
+      {toVisible.mainSide && <Menu />}
+      {toVisible.main && <MainOptions />}
+      {toVisible.changePasswd && <ChangePassword />}
+      {toVisible.editAcc && <EditRelatedAccount />}
+      {toVisible.addAcc && <AddRelatedAccount />}
+      {toVisible.changeAcc && <ChangeAccountInfo />}
+      {toVisible.delAcc && <DeleteRelatedAccount />}
     </>
   );
 }

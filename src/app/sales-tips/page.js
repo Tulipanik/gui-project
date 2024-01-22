@@ -1,4 +1,4 @@
-import ConversationBox from "../components/sales-tips/conversationBox";
+import ConversationBox from "@/components/sales-tips/conversationBox";
 
 export default function SalesTips() {
   return (
