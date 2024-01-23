@@ -1,9 +1,10 @@
 import { addAccWindow } from "@/lib/features/windows/windowsSlice";
 import { usersData } from "@/mock-up/user";
+import { VapingRoomsSharp } from "@mui/icons-material";
 import { useDispatch } from "react-redux";
 
 export default function AddRelatedAccount() {
-  const name = "";
+  var name = "";
 
   const addRelated = () => {
     usersData[0].corelaredAccounts.push(name);
@@ -18,7 +19,9 @@ export default function AddRelatedAccount() {
           <input placeholder="E-mail" />
           <input placeholder="URL link to shop" />
           <div className="w-full [&_*]:inline-block mt-10 [&_*]:py-3 space-x-2 [&_*]:w-40 [&_*]:rounded-full mb-3">
-            <button className="bg-orange-400">Add</button>
+            <button className="bg-orange-400" onClick={() => addRelated()}>
+              Add
+            </button>
             <button
               className="bg-orange-600"
               onClick={() => dispatch(addAccWindow())}
