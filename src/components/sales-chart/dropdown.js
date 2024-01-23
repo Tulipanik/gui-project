@@ -79,7 +79,7 @@ const Menu = React.forwardRef((props, ref) => {
           return {
             ...resolvedSlotProps,
             className: clsx(
-              "bg-white text-sm box-border p-1.5 my-3 mx-0 rounded-xl overflow-auto outline-0 bg-white dark:bg-slate-900 border border-solid border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-300 min-w-listbox shadow-md dark:shadow-slate-900",
+              "bg-orange-100 text-sm box-border p-1.5 my-3 mx-0 rounded-xl overflow-auto outline-0 bg-white dark:bg-slate-900 border border-solid border-orange-400 dark:border-slate-700 text-slate-900 dark:text-slate-300 min-w-listbox shadow-md dark:shadow-slate-900",
               resolvedSlotProps?.className
             ),
           };
@@ -107,7 +107,7 @@ const MenuButton = React.forwardRef((props, ref) => {
     <BaseMenuButton
       ref={ref}
       className={clsx(
-        "cursor-pointer w-40 text- font-sans box-border rounded-full drop-shadow-lg px-3 py-1 bg-white dark:bg-slate-900 border border-solid border-orange-400 dark:border-orange-400 text-slate-900 dark:text-slate-200 hover:bg-slate-50 hover:dark:bg-slate-800 hover:border-slate-300 dark:hover:border-slate-600 focus-visible:shadow-[0_0_0_4px_#ddd6fe] dark:focus-visible:shadow-[0_0_0_4px_#a78bfa] focus-visible:outline-none shadow-sm active:shadow-none",
+        "bg-orange-100 cursor-pointer w-[170px] text- font-sans box-border rounded-full drop-shadow-lg px-3 py-1 bg-white dark:bg-slate-900 border border-solid border-orange-400 dark:border-orange-400 text-slate-900 dark:text-slate-200 hover:bg-slate-50 hover:dark:bg-slate-800 hover:border-slate-300 dark:hover:border-slate-600 focus-visible:shadow-[0_0_0_4px_#ddd6fe] dark:focus-visible:shadow-[0_0_0_4px_#a78bfa] focus-visible:outline-none shadow-sm active:shadow-none",
         className
       )}
       {...other}

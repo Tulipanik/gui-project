@@ -39,7 +39,7 @@ export default function SalesChart() {
           setCurrentData(dataSortedByDays);
           break;
 
-        case "last week":
+        case "last year":
           setCurrentData(dataSortedByMounths);
           break;
 
@@ -70,20 +70,15 @@ export default function SalesChart() {
         <div className="inline-flex items-center justify-center">
           Measure of presentation:
           <MenuSimple
-            options={[
-              "turnover",
-              "number of sales",
-            ]} setStatus={setSelectedMeasure}
+            options={["turnover", "number of sales"]}
+            setStatus={setSelectedMeasure}
           />{" "}
         </div>
         <div className="inline-flex items-center justify-center">
           Time range:{" "}
           <MenuSimple
-            options={[
-              "today",
-              "this week",
-              "last week",
-            ]} setStatus={setSelectedTimeRange}
+            options={["today", "this week", "last year"]}
+            setStatus={setSelectedTimeRange}
           />
         </div>
 

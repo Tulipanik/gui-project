@@ -1,10 +1,15 @@
 import MostlyBuyOptions from "./mostlyBuyOptions";
 import MostlyViedOptions from "./mostlyViedOptions";
+import MenuSimple from "@/components/sales-chart/dropdown";
 
-export default function Top5Table({ offers, measurment }) {
+export default function Top5Table({ offers, measurment, setSelectedOption }) {
   if (measurment === "turnover") {
     return (
-      <div className="bg-orange-400 w-10/12 h-[75%] p-5 px-1 pb-1">
+      <div className="bg-orange-400 w-10/12 p-5 px-1 ">
+        <MenuSimple
+          options={["turnover", "number of sales"]}
+          setStatus={setSelectedOption}
+        />
         <MostlyBuyOptions
           name={offers[0].productName}
           picesSold={offers[0].numberOfSoldCopies}
@@ -34,7 +39,11 @@ export default function Top5Table({ offers, measurment }) {
     );
   } else {
     return (
-      <div className="bg-orange-400 w-10/12 h-5/6 p-5 px-1 pb-1">
+      <div className="bg-orange-400 w-10/12 p-5 px-1">
+        <MenuSimple
+          options={["turnover", "number of sales"]}
+          setStatus={setSelectedOption}
+        />
         <MostlyViedOptions
           name={offers[0].productName}
           picesSold={offers[0].numberOfSoldCopies}

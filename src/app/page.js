@@ -6,8 +6,8 @@ import Chart from "@/components/sales-chart/chart";
 
 export default function Home() {
   return (
-    <div class="grid grid-cols-3 gap-4 my-5 mx-5">
-      <div class="bg-orange-200 rounded-lg drop-shadow-md">
+    <div className="grid grid-cols-3 gap-4 my-5 mx-5">
+      <div className="bg-orange-200 rounded-lg drop-shadow-md">
         {}
         <table className="mx-auto w-4/5 border-2 border-solid border-orange-400 text-left">
           <thead className="bg-orange-200">
@@ -35,7 +35,7 @@ export default function Home() {
           </tbody>
         </table>
       </div>
-      <div class="bg-orange-200 rounded-lg drop-shadow-md">
+      <div className="bg-orange-200 rounded-lg drop-shadow-md">
         Buyer opinions:
         <table className="mx-auto w-4/5 border-2 border-solid border-orange-400 text-left">
           <thead className="bg-orange-200">
@@ -60,7 +60,7 @@ export default function Home() {
           </tbody>
         </table>
       </div>
-      <div class="bg-orange-200 rounded-lg drop-shadow-md">
+      <div className="bg-orange-200 rounded-lg drop-shadow-md">
         Offer ranking:
         <table className="mx-auto w-4/5 border-2 border-solid border-orange-400 text-left">
           <thead className="bg-orange-200">
@@ -85,7 +85,7 @@ export default function Home() {
           </tbody>
         </table>
       </div>
-      <div class="bg-orange-200 rounded-lg drop-shadow-md">
+      <div className="bg-orange-200 rounded-lg drop-shadow-md">
         Sales Quality:
         <h2>Quality check:</h2>
         <h5>You are almost perfect seller !!!</h5>
@@ -93,7 +93,7 @@ export default function Home() {
           Score: <span>380</span>/<span>450</span>
         </p>
       </div>
-      <div class="col-span-2 bg-orange-200 flex ">
+      <div className="col-span-2 bg-orange-200 flex ">
         Sales chart:{" "}
         <div className="right-0 w-11/12">
           <Chart
